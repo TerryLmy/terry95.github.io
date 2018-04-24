@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="数据采集与分析的第一次作业，老师的要求是写出程序并且给出相关的图，最重要的是给出对于离散傅里叶之后的信号频谱的分析。第一次作业的内容还是很基础的，但是要求基本功要扎实，这是我的弱项。所以需要我认认真真的去做这道题目，详细的记录。 #作业要求     假设信号为$ x(t)=2cos(20pi \times t)+5cos(100pi \times t) $采样间隔/周期是 Ts=0.005s,采">
+<meta name="description" content="数据采集与分析的第一次作业，老师的要求是写出程序并且给出相关的图，最重要的是给出对于离散傅里叶之后的信号频谱的分析。第一次作业的内容还是很基础的，但是要求基本功要扎实，这是我的弱项。所以需要我认认真真的去做这道题目，详细的记录。 作业要求    假设信号为 $ x(t)=2cos(20pi \times t)+5cos(100pi \times t) $ 采样间隔/周期是 Ts=0.005s,采">
 <meta name="keywords" content="-信号处理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据采集大作业01（一）">
 <meta property="og:url" content="http://terrylmy.github.io/2018/04/24/signal01/index.html">
 <meta property="og:site_name" content="高更的塔希提岛">
-<meta property="og:description" content="数据采集与分析的第一次作业，老师的要求是写出程序并且给出相关的图，最重要的是给出对于离散傅里叶之后的信号频谱的分析。第一次作业的内容还是很基础的，但是要求基本功要扎实，这是我的弱项。所以需要我认认真真的去做这道题目，详细的记录。 #作业要求     假设信号为$ x(t)=2cos(20pi \times t)+5cos(100pi \times t) $采样间隔/周期是 Ts=0.005s,采">
+<meta property="og:description" content="数据采集与分析的第一次作业，老师的要求是写出程序并且给出相关的图，最重要的是给出对于离散傅里叶之后的信号频谱的分析。第一次作业的内容还是很基础的，但是要求基本功要扎实，这是我的弱项。所以需要我认认真真的去做这道题目，详细的记录。 作业要求    假设信号为 $ x(t)=2cos(20pi \times t)+5cos(100pi \times t) $ 采样间隔/周期是 Ts=0.005s,采">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-24T13:11:28.000Z">
+<meta property="og:updated_time" content="2018-04-24T13:26:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据采集大作业01（一）">
-<meta name="twitter:description" content="数据采集与分析的第一次作业，老师的要求是写出程序并且给出相关的图，最重要的是给出对于离散傅里叶之后的信号频谱的分析。第一次作业的内容还是很基础的，但是要求基本功要扎实，这是我的弱项。所以需要我认认真真的去做这道题目，详细的记录。 #作业要求     假设信号为$ x(t)=2cos(20pi \times t)+5cos(100pi \times t) $采样间隔/周期是 Ts=0.005s,采">
+<meta name="twitter:description" content="数据采集与分析的第一次作业，老师的要求是写出程序并且给出相关的图，最重要的是给出对于离散傅里叶之后的信号频谱的分析。第一次作业的内容还是很基础的，但是要求基本功要扎实，这是我的弱项。所以需要我认认真真的去做这道题目，详细的记录。 作业要求    假设信号为 $ x(t)=2cos(20pi \times t)+5cos(100pi \times t) $ 采样间隔/周期是 Ts=0.005s,采">
 
 
 
@@ -363,10 +363,9 @@
 
       
         <p><strong> 数据采集与分析的第一次作业，老师的要求是写出程序并且给出相关的图，最重要的是给出对于离散傅里叶之后的信号频谱的分析。第一次作业的内容还是很基础的，但是要求基本功要扎实，这是我的弱项。所以需要我认认真真的去做这道题目，详细的记录。</strong></p>
-<p>#作业要求</p>
-<blockquote>
+<h1 id="作业要求"><a href="#作业要求" class="headerlink" title="作业要求"></a>作业要求</h1><blockquote>
 <ul>
-<li>  假设信号为$ x(t)=2cos(20pi \times t)+5cos(100pi \times t) $采样间隔/周期是 Ts=0.005s,采样时间分别是0.1s,0.125s，1.125s。对该信号进行离散傅里叶变化，分析该频谱。</li>
+<li>  假设信号为 $ x(t)=2cos(20pi \times t)+5cos(100pi \times t) $ 采样间隔/周期是 Ts=0.005s,采样时间分别是0.1s,0.125s，1.125s。对该信号进行离散傅里叶变化，分析该频谱。</li>
 </ul>
 </blockquote>
 
@@ -466,8 +465,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -531,6 +539,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#作业要求"><span class="nav-number">1.</span> <span class="nav-text">作业要求</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
