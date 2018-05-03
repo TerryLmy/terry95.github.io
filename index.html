@@ -262,6 +262,156 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://terrylmy.github.io/2018/05/03/signal03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Terry">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/dog.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高更的塔希提岛">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/03/signal03/" itemprop="url">数据处理小作业（关于直流过采样）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-03T09:29:10+08:00">
+                2018-05-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信号处理/" itemprop="url" rel="index">
+                    <span itemprop="name">信号处理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目要求："><a href="#题目要求：" class="headerlink" title="题目要求："></a>题目要求：</h1><blockquote>
+<p>使用量程为1V的标准测量0.8V的直流电压，量化误差是-0.2V。如果测量100次，误差会不会改变。如何减小误差。</p>
+</blockquote>
+<h1 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h1><p>首先如果直接用1V的量程测量0.8V的电压，产生的0.2的量化误差是不会改变的，0.2V的误差是属于无法消除的系统误差，多次采样得到的数字输出值总是相同的，因此分辨率收到量化误差的限制。<br><strong> 但是可以通过其他方法测量一个稳定的直流信号，能够减小误差。即：过采样（oversampling）</strong></p>
+<blockquote>
+<p>如果在一个稳定的直流信号上叠加一个交流（抖动）信号，并用比该交流信号频率高的多的采样频率进行采样。此时得到的数字输出值将是变化的，用这些采样结果的平均值表示模数转换器的转换结果便能得到比同样模数转换器高得多的采样分辨率。</p>
+</blockquote>
+<p>其实老师布置的作业可能没有太直接用到直流采样的方式，但是这个思路很有意思。下一篇blog会详细介绍过采样。<br><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fqxxab4elrj30lx0dadiw.jpg" alt=""></p>
+<h1 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h1><p><strong> 我第一开始一门心思的去想如何通过数学的方式去减小误差。虽然最后我的作业上写的是即使通过100次测量也不会减小误差,但是并没有深入思考如何解决这个问题。下次需要多注意！不要仅限于写作业，要去思考如何解决这个问题。</strong></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://terrylmy.github.io/2018/04/25/signal02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -731,7 +881,7 @@
               
                 <a href="/archive">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -753,7 +903,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
