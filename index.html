@@ -724,7 +724,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/24/signal01/" itemprop="url">数据采集大作业01（一）</a></h1>
+                <a class="post-title-link" href="/2018/04/24/signal01/" itemprop="url">数据采集大作业01(一)</a></h1>
         
 
         <div class="post-meta">
@@ -804,9 +804,17 @@
 </blockquote>
 <h1 id="分析如下："><a href="#分析如下：" class="headerlink" title="分析如下："></a>分析如下：</h1><p>1.原始信号的时域分析<br>2.离散傅里叶变化<br>3.频谱分析</p>
 <h2 id="原始信号的时域分析"><a href="#原始信号的时域分析" class="headerlink" title="原始信号的时域分析"></a>原始信号的时域分析</h2><ol>
-<li>信号$$ x(t)=2cos(20pi \times t)+5cos(100pi \times t) $$是由两个正弦信号组成的信号，如果两个正弦信号（周期信号）的周期之比是有理数时，那么信号之和也是一个周期信号，周期是两个原信号的周期的最小公倍数。<br>$$ 2cos(20pi \times t) $$ 的周期是0.1s，$$ 5cos(100pi \times t) $$ 的周期是0.002s,两者周期之比是有理数，因此原始信号的周期是0.1s。</li>
-<li></li>
+<li>信号$$ x(t)=2cos(20pi \times t)+5cos(100pi \times t) $$是由两个正弦信号组成的信号，如果两个正弦信号（周期信号）的周期之比是有理数时，那么信号之和也是一个周期信号，周期是两个原信号的周期的最小公倍数。<br>$$ 2cos(20pi \times t) $$的周期是0.1s，$$ 5cos(100pi \times t) $$的周期是0.002s,两者周期之比是有理数，因此原始信号的周期是0.1s。</li>
+<li>我们得到了原始信号的周期，同时也就得到了该信号的基频f0=10hz，分析原信号我们可以得到该信号的最高谐波分量是5f0=50hz。</li>
 </ol>
+<h2 id="离散傅里叶变化-DFT"><a href="#离散傅里叶变化-DFT" class="headerlink" title="离散傅里叶变化 DFT"></a>离散傅里叶变化 DFT</h2><p>离散傅里叶变化的真正意义是可以对任意连续的的时域信号进行采样，截断，接着做离散傅里叶变化。我们能够得到离散的频谱，并且频谱的包络就是我们对原始信号的分析。<br><strong> DFT的具体实现过程有以下三个阶段：</strong></p>
+<ul>
+<li>时域采样</li>
+<li>时域截断</li>
+<li>频域采样</li>
+</ul>
+<h3 id="总体介绍各个部分"><a href="#总体介绍各个部分" class="headerlink" title="总体介绍各个部分"></a>总体介绍各个部分</h3><p><img src="https://ws1.sinaimg.cn/large/6a59fa8dly1frdj352fkuj20e20au78a.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/6a59fa8dly1frdj4ozv1uj20e10aeact.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/6a59fa8dly1frdjgb42dlj20fc0b7q5l.jpg" alt=""></p>
+<p>下一篇文章详细介绍各个部分。</p>
 
           
         
