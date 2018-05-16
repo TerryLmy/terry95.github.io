@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="-信号处理," />
+  <meta name="keywords" content="-数据采集与信号处理," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="hey,hey!">
-<meta name="keywords" content="-信号处理">
+<meta name="description" content="高性能ADC的相关指标 衡量A/D转换器的性能, 一般依据其分辨率和转换速度两个指标。   与A/D转换器分辨率相关的技术指标包括     1.分辨率、    2.精度，绝对精度、相对精度    3.绝对误差、相对误差、量化误差    4.失调误差、增益误差    5.积分非线性误差、微分非线性误差、动态误差等。 与A/D转换器转换速度相关的技术指标包括     1.转换速率、转换频率    2.">
+<meta name="keywords" content="-数据采集与信号处理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="并行比较型ADC">
+<meta property="og:title" content="ADC的总结01（相关性能指标解释）">
 <meta property="og:url" content="http://terrylmy.github.io/2018/04/25/signal02/index.html">
 <meta property="og:site_name" content="高更的塔希提岛">
-<meta property="og:description" content="hey,hey!">
+<meta property="og:description" content="高性能ADC的相关指标 衡量A/D转换器的性能, 一般依据其分辨率和转换速度两个指标。   与A/D转换器分辨率相关的技术指标包括     1.分辨率、    2.精度，绝对精度、相对精度    3.绝对误差、相对误差、量化误差    4.失调误差、增益误差    5.积分非线性误差、微分非线性误差、动态误差等。 与A/D转换器转换速度相关的技术指标包括     1.转换速率、转换频率    2.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-25T14:49:18.000Z">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fr5f7oag0uj30ig044wfo.jpg">
+<meta property="og:updated_time" content="2018-05-09T13:57:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="并行比较型ADC">
-<meta name="twitter:description" content="hey,hey!">
+<meta name="twitter:title" content="ADC的总结01（相关性能指标解释）">
+<meta name="twitter:description" content="高性能ADC的相关指标 衡量A/D转换器的性能, 一般依据其分辨率和转换速度两个指标。   与A/D转换器分辨率相关的技术指标包括     1.分辨率、    2.精度，绝对精度、相对精度    3.绝对误差、相对误差、量化误差    4.失调误差、增益误差    5.积分非线性误差、微分非线性误差、动态误差等。 与A/D转换器转换速度相关的技术指标包括     1.转换速率、转换频率    2.">
+<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fr5f7oag0uj30ig044wfo.jpg">
 
 
 
@@ -126,7 +128,7 @@
 
 
 
-  <title>并行比较型ADC | 高更的塔希提岛</title>
+  <title>ADC的总结01（相关性能指标解释） | 高更的塔希提岛</title>
   
 
 
@@ -280,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">并行比较型ADC</h1>
+          <h1 class="post-title" itemprop="name headline">ADC的总结01（相关性能指标解释）</h1>
         
 
         <div class="post-meta">
@@ -315,8 +317,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信号处理/" itemprop="url" rel="index">
-                    <span itemprop="name">信号处理</span>
+                  <a href="/categories/数据采集与信号处理/" itemprop="url" rel="index">
+                    <span itemprop="name">数据采集与信号处理</span>
                   </a>
                 </span>
 
@@ -362,7 +364,18 @@
       
 
       
-        
+        <h1 id="高性能ADC的相关指标"><a href="#高性能ADC的相关指标" class="headerlink" title="高性能ADC的相关指标"></a>高性能ADC的相关指标</h1><blockquote>
+<p>衡量A/D转换器的性能, 一般依据其<strong>分辨率和转换速度</strong>两个指标。</p>
+</blockquote>
+<p><strong> 与A/D转换器分辨率相关的技术指标包括 </strong><br>    1.分辨率、<br>    2.精度，绝对精度、相对精度<br>    3.绝对误差、相对误差、量化误差<br>    4.失调误差、增益误差<br>    5.积分非线性误差、微分非线性误差、动态误差等。<br><strong> 与A/D转换器转换速度相关的技术指标包括 </strong><br>    1.转换速率、转换频率<br>    2.采样时间、采样频率<br>    3.转换时间、<br>    4.恢复时间、<br>    5.传输延迟、<br>    6.阶跃响应时间</p>
+<h1 id="与A-D转换器分辨率相关的指标"><a href="#与A-D转换器分辨率相关的指标" class="headerlink" title="与A/D转换器分辨率相关的指标"></a>与A/D转换器分辨率相关的指标</h1><h2 id="分辨率-Resolution"><a href="#分辨率-Resolution" class="headerlink" title="分辨率 Resolution"></a>分辨率 Resolution</h2><p>分辨率是指 A/D转换器所能分辨模拟输入信号的最小变化量<br>即$$ 分辨率=1/2^n $$</p>
+<h2 id="精度-Accuracy"><a href="#精度-Accuracy" class="headerlink" title="精度 Accuracy"></a>精度 Accuracy</h2><p>精度一般是指产生各个输出代码所需要的模拟量的实际值与理论值之差的最大值叫做精度。此时需要注意的是我们一般所指的模拟量的实际值是指<strong>中点值</strong>。</p>
+<p>举个例子：<br><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fr5f7oag0uj30ig044wfo.jpg" alt=""></p>
+<blockquote>
+<p>精度与分辨率之间的差别：<br>精度指的是 转换器的实际值与理论值之间的偏差。分辨率是指对相邻数值加以区分的能力，转换器所能分辨的模拟信号的最小变化值。</p>
+</blockquote>
+<p>#量化误差 Quantizing error<br>输入模拟量在量化取整的过程中所引起的误差。量化误差是模数转换器固有的，其大小和分辨率直接相关，一般来说是1 LSB或者是1/2 LSB。</p>
+
       
     </div>
     
@@ -379,7 +392,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/信号处理/" rel="tag"># -信号处理</a>
+            <a href="/tags/数据采集与信号处理/" rel="tag"># -数据采集与信号处理</a>
           
         </div>
       
@@ -463,8 +476,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -483,7 +505,7 @@
               
                 <a href="/archive">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -494,7 +516,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -528,6 +550,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#高性能ADC的相关指标"><span class="nav-number">1.</span> <span class="nav-text">高性能ADC的相关指标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#与A-D转换器分辨率相关的指标"><span class="nav-number">2.</span> <span class="nav-text">与A/D转换器分辨率相关的指标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分辨率-Resolution"><span class="nav-number">2.1.</span> <span class="nav-text">分辨率 Resolution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#精度-Accuracy"><span class="nav-number">2.2.</span> <span class="nav-text">精度 Accuracy</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
